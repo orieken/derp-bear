@@ -1,5 +1,11 @@
 *.gem
 *.rbc
+# not sure i want to remove these 
+.autotest
+.idea/
+.rspec
+.rvmrc
+##############
 .bundle
 .config
 coverage
