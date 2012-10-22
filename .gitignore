@@ -1,11 +1,5 @@
 *.gem
 *.rbc
-# not sure i want to remove these 
-.autotest
-.idea/
-.rspec
-.rvmrc
-##############
 .bundle
 .config
 coverage
@@ -17,8 +11,16 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+*.log
 
 # YARD artifacts
 .yardoc
 _yardoc
 doc/
+
+# not sure i want to remove these
+.autotest
+.idea/
+.rspec
+.rvmrc
+##############
