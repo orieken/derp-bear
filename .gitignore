@@ -12,6 +12,7 @@ test/tmp
 test/version_tmp
 tmp
 *.log
+.idea/
 
 # YARD artifacts
 .yardoc
@@ -19,8 +20,5 @@ _yardoc
 doc/
 
 # not sure i want to remove these
-.autotest
-.idea/
-.rspec
 .rvmrc
 ##############
