@@ -6,7 +6,7 @@ I want to be able to create a new example
 A new example has a name, a blub about it and some html to recreate it
 
 
-Scenario: Create a new Example
+Scenario: view an Example
   Given I visit the site
   When I click the link of the example
   Then I should be taken to the example
