@@ -1,7 +1,7 @@
 source :rubygems
 
 gem 'sinatra'
-
+gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
 gem 'shotgun'
 gem 'lorem'
 gem 'sinatra-flash'
@@ -11,6 +11,10 @@ gem 'haml'
 gem 'thin'
 gem 'heroku'
 gem 'sass'
+gem 'activerecord'
+gem 'factory_girl'
+gem 'accept_values_for'
+gem 'pg'
 
 group :test do
   gem 'cucumber'
