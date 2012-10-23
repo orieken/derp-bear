@@ -10,5 +10,4 @@ It should have some basic information like the language, date, opensource tool u
 
 Scenario: visit the site
   Given I visit the site
-  Then I should see the Authentication error message in "english"
   Then I should see the home page title
