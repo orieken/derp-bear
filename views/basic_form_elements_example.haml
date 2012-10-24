@@ -1,0 +1,17 @@
+%form#submit_example_form{:action => "/", :method => "post"}
+  %legend Please enter
+  %ol
+    %li
+      %fieldset
+        %label{:for => 'first_name'}
+        %input#first_name{:type => 'text'}
+    %li
+      %fieldset
+        %label{:for => 'date_of_birth'} Date of Birth
+        %input#start_date{:type => 'date', :maxlength => '255', :name => 'date_of_birth', :placeholder => "MM/DD/YYYY"}
+
+
+
+    %li
+      %fieldset
+        %input#submit_button{:type => "submit", :value => "Submit" }
