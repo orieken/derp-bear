@@ -1,3 +1,4 @@
+=begin
 require 'uri'
 
 configure :production, :development, :test do
@@ -11,4 +12,4 @@ configure :production, :development, :test do
       :database => db.path[1..-1],
       :encoding => 'utf8'
   )
-end
+end=end

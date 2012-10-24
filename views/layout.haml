@@ -5,4 +5,14 @@
     %title= @title || "Welcome to Derp-Bear"
 
 %body
+  %header#main
+    %a{:href => 'www.derp-bear.com' }
+  %nav#primary
+    %ul
+      %li
+        %a{:href => "/"} Home
+      %li
+        %a{:href => "/about"} About
+
+  %section#content
   = yield
