@@ -15,6 +15,7 @@ gem 'activerecord'
 gem 'factory_girl'
 gem 'accept_values_for'
 gem 'pg'
+gem 'rake'
 
 group :test do
   gem 'cucumber'
