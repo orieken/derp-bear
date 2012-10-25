@@ -1,17 +1,68 @@
 %form#submit_example_form{:action => "/", :method => "post"}
-  %legend Please enter
+  %legend Please Fill in the Form below
   %ol
     %li
       %fieldset
-        %label{:for => 'first_name'}
-        %input#first_name{:type => 'text'}
+        %legend Your Information
+        %ol
+          %li
+            %label{:for => 'first_name'} First Name
+            %input#first_name{:type => 'text', :name => 'first_name', :placeholder => "First Name", :required => true }
+          %li
+            %label{:for => 'last_name'} Last Name
+            %input#last_name{:type => 'text', :name => 'last_name', :placeholder => "Last Name", :required => true}
+          %li
+            %label{:for => 'date_of_birth'} Date of Birth
+            %input#date_of_birth{:type => 'date', :maxlength => '255', :name => 'date_of_birth', :placeholder => "MM/DD/YYYY"}
+          %li
+            %label{:for => 'pet_select'} Select a Pet
+            %select#pet_select{:name => 'pet_select'}
+              %option Cat
+              %option Dog
+              %option Rabbit
+              %option Snake
+              %option Horse
     %li
       %fieldset
-        %label{:for => 'date_of_birth'} Date of Birth
-        %input#start_date{:type => 'date', :maxlength => '255', :name => 'date_of_birth', :placeholder => "MM/DD/YYYY"}
+        %legend What is your Sex?
+        %ol
+          %li
+            %label.selectors{:for => 'male'} Male
+            %input#male{:type => 'radio', :name => 'sex', :value => 'male'}
+          %li
+            %label.selectors{:for => 'female'} Female
+            %input#female{:type => 'radio', :name => 'sex', :value => 'female'}
+    %li
+      %fieldset
+        %legend How do you get to work?
+        %ol
+          %li
+            %input#bike{:type => 'checkbox', :name => 'transportation', :value => 'bike'}
+            %label.selectors{:for => 'bike'} Bike
+          %li
+            %input#car{:type => 'checkbox', :name => 'transportation', :value => 'car'}
+            %label.selectors{:for => 'car'} Car
+          %li
+            %input#walk{:type => 'checkbox', :name => 'transportation', :value => 'walk'}
+            %label.selectors{:for => 'walk'} Walk
 
+    %li
+      %fieldset
+        %ol
+          %li
+            %label{:for => 'password_field'} Example password
+            %input#last_name{:type => 'text', :name => 'password_field', :placeholder => "Enter Password"}
+    %li
+      %fieldset
+        %ol
+          %li
+            %label{:for => 'free_text_area'} Free Text Field
+            %textarea#free_text_area{:name => 'free_text_area', :rows => 4, :cols => 40}
+          %li
+            %label{:for => 'read_only_text_area'} Read only Text Field
+            %textarea#read_only_text_area{:name => 'Read_only_text_area', :rows => 4, :cols => 40, :readonly => true} This text is read only!
 
 
     %li
       %fieldset
-        %input#submit_button{:type => "submit", :value => "Submit" }
+        %input.submit_button{:type => "submit", :value => "Submit" }
