@@ -1,6 +1,6 @@
 %form#submit_example_form{:action => "/", :method => "post"}
   %legend Please Fill in the Form below
-  %ol
+  %ul
     %li
       %fieldset
         %legend Your Information
@@ -48,12 +48,14 @@
 
     %li
       %fieldset
+        %legend Password Example
         %ol
           %li
             %label{:for => 'password_field'} Example password
             %input#last_name{:type => 'text', :name => 'password_field', :placeholder => "Enter Password"}
     %li
       %fieldset
+        %legend Text Area Examples
         %ol
           %li
             %label{:for => 'free_text_area'} Free Text Field
