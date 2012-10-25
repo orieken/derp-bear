@@ -1,7 +1,7 @@
 When /^I click the link of the example$/ do
-  @site.link(text: "Example 1").click
+  @site.link(text: "Basic Form Example").click
 end
 
 Then /^I should be taken to the example$/ do
-  @site.title.should eql "This is Example 1!"
+  @site.form.legend.text.should eql "Please Fill in the Form below"
 end
