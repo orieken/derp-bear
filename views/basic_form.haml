@@ -12,8 +12,11 @@
             %label{:for => 'last_name'} Last Name
             %input#last_name{:type => 'text', :name => 'last_name', :placeholder => "Last Name", :required => true}
           %li
-            %label{:for => 'date_of_birth'} Date of Birth
-            %input#date_of_birth{:type => 'date', :maxlength => '255', :name => 'date_of_birth', :placeholder => "MM/DD/YYYY"}
+            %label{:for => 'email'} Email
+            %input#email{:type => 'email', :name => 'email', :placeholder => "name@example.com", :required => true}
+          %li
+            %label{:for => 'website_url'} Website
+            %input#website_url{:type => 'url', :name => 'website_url'}
           %li
             %label{:for => 'pet_select'} Select a Pet
             %select#pet_select{:name => 'pet_select'}
@@ -22,6 +25,25 @@
               %option Rabbit
               %option Snake
               %option Horse
+    %li
+      %fieldset
+        %legend Dates
+        %ol
+          %li
+            %label{:for => 'date_of_birth'} Date of Birth
+            %input#date_of_birth{:type => 'date', :maxlength => '255', :name => 'date_of_birth'}
+          %li
+            %label{:for => 'date_of_birth'} Date Time
+            %input#date_of_birth{:type => 'datetime', :maxlength => '255', :name => 'date_of_birth'}
+          %li
+            %label{:for => 'date_of_birth'} Date Time Local
+            %input#date_of_birth{:type => 'datetime-local', :maxlength => '255', :name => 'date_of_birth'}
+          %li
+            %label{:for => 'month_item'} Month
+            %input#month_item{:type => 'month', :name => 'month_item'}
+          %li
+            %label{:for => 'week_item'} Week
+            %input#week_item{:type => 'week', :name => 'week_item'}
     %li
       %fieldset
         %legend What is your Sex?
@@ -45,17 +67,16 @@
           %li
             %input#walk{:type => 'checkbox', :name => 'transportation', :value => 'walk'}
             %label.selectors{:for => 'walk'} Walk
-
     %li
       %fieldset
         %legend Password Example
         %ol
           %li
             %label{:for => 'password_field'} Example password
-            %input#last_name{:type => 'text', :name => 'password_field', :placeholder => "Enter Password"}
+            %input#password_field{:type => 'text', :name => 'password_field', :placeholder => "Enter Password"}
     %li
       %fieldset
-        %legend Text Area Examples
+        %legend Terms of Agreement
         %ol
           %li
             %label{:for => 'free_text_area'} Free Text Field
@@ -63,8 +84,25 @@
           %li
             %label{:for => 'read_only_text_area'} Read only Text Field
             %textarea#read_only_text_area{:name => 'Read_only_text_area', :rows => 4, :cols => 40, :readonly => true} This text is read only!
-
-
+    %li
+      %fieldset
+        %label{:for => "hi_im_hidden"} Hidden Field
+        %hidden#hi_im_hidden{:name => 'hi_im_hidden', :value => 'This element is hidden!'}
     %li
       %fieldset
         %input.submit_button{:type => "submit", :value => "Submit" }
+
+        -#file
+        -#image
+
+        -#number
+
+
+        -#range
+        -#reset
+        -#search
+
+        -#tel
+
+        -#time
+        -#url

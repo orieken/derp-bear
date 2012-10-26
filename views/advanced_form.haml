@@ -1,0 +1,10 @@
+%form#submit_advanced_example{:action => "/", :method => "post"}
+  %legend Please Fill in the form below
+  %ul
+    %li
+      %fieldset
+        %legend Pick a Color
+        %ol
+          %li
+            %label{:for => 'color_field'} Colors
+            %input#color_field{:type => 'color', :name => 'color_field'}
