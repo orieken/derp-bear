@@ -27,23 +27,24 @@
               %option Horse
     %li
       %fieldset
-        %legend Dates
+        %legend Date
         %ol
           %li
             %label{:for => 'date_of_birth'} Date of Birth
             %input#date_of_birth{:type => 'date', :maxlength => '255', :name => 'date_of_birth'}
-          %li
-            %label{:for => 'date_of_birth'} Date Time
-            %input#date_of_birth{:type => 'datetime', :maxlength => '255', :name => 'date_of_birth'}
-          %li
-            %label{:for => 'date_of_birth'} Date Time Local
-            %input#date_of_birth{:type => 'datetime-local', :maxlength => '255', :name => 'date_of_birth'}
-          %li
-            %label{:for => 'month_item'} Month
-            %input#month_item{:type => 'month', :name => 'month_item'}
-          %li
-            %label{:for => 'week_item'} Week
-            %input#week_item{:type => 'week', :name => 'week_item'}
+          -#not supported
+          -#%li
+          -#  %label{:for => 'date_of_birth'} Date Time
+          -#  %input#date_of_birth{:type => 'datetime', :maxlength => '255', :name => 'date_of_birth'}
+          -#%li
+          -#  %label{:for => 'date_of_birth'} Date Time Local
+          -#  %input#date_of_birth{:type => 'datetime-local', :maxlength => '255', :name => 'date_of_birth'}
+          -#%li
+          -#  %label{:for => 'month_item'} Month
+          -#  %input#month_item{:type => 'month', :name => 'month_item'}
+          -#%li
+          -#  %label{:for => 'week_item'} Week
+          -#  %input#week_item{:type => 'week', :name => 'week_item'}
     %li
       %fieldset
         %legend What is your Sex?
