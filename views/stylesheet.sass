@@ -147,6 +147,8 @@ caption, tbody, tfoot, thead, tr, th, td
   :outline 0
 
 // end reset css
+//
+//#######################
 html, body, h1, form, fieldset, legend, ol, li
   :margin 0
   :padding 0
@@ -181,6 +183,7 @@ html, body, h1, form, fieldset, legend, ol, li
   :padding 5px 15px
   :color #369
   :text-shadow 1px 1px 1px #fff
+  :text-decoration none
   :-webkit-border-radius 5px
   :-moz-border-radius 5px
   :border-radius 5px
@@ -302,28 +305,44 @@ form
     :-moz-box-shadow 1px 1px 3px rgba(30, 37, 6, .5)
     :box-shadow 1px 1px 3px rgba(30, 37, 6, .5)
 
-  //#history
-  //  :float left
-  //  :width 300px
-  //  :height 150px
-  //    //:background url(../images/history.png) no-repeat top left
-  //  :opacity .85
-  //  :padding 15px 0 0 225px
-  //  :color #6a6a5d
-  //  :text-shadow 1px 1px 1px #fff
-  //  :clear none
-  //
-  //#history h1
-  //  :font bold 12px "DroidSansBold", Verdana, sans-serif
-  //  :text-transform uppercase
-  //
-  //#history p
-  //  :font normal 12px "DroidSansRegular", Verdana, sans-serif
-  //  :line-height 18px
-  //
-  //#history p a
-  //  :text-decoration underline
-  //  :color #6a6a5d
-  //
-  //#history p a:hover
-  //    :text-decoration none
+section#history,
+section#examples,
+section#references
+  //:background url(../images/history.png) no-repeat top left
+  :clear none
+  :color #6a6a5d
+  :float left
+  :height 150px
+  :width 350px
+  :opacity .85
+  :padding 15px 15px 0 40px
+  :text-shadow 1px 1px 1px #fff
+
+section#history
+  :width 400px
+
+  h1
+    :font bold 12px "DroidSansBold", Verdana, sans-serif
+    :text-transform uppercase
+
+  p
+    :font normal 12px "DroidSansRegular", Verdana, sans-serif
+    :line-height 18px
+
+
+a
+  :padding 5px 15px
+  :text-decoration underline
+  :color #369
+  :text-shadow 1px 1px 1px #fff
+  :-webkit-border-radius 5px
+  :-moz-border-radius 5px
+  :border-radius 5px
+  :-webkit-transition all .3s ease-in-out
+  :-moz-transition all .3s ease-in-out
+  :-o-transition all .3s ease-in-out
+  :transition all .3s ease-in-out
+
+a:hover
+  :text-decoration none
+  :color #dc692e

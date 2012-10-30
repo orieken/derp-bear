@@ -5,14 +5,14 @@
     %title= @title || "Welcome to Derp-Bear"
     %link{:rel => 'stylesheet', :href => '/stylesheet.css'}
 
-%body
-  %header#main
-  %nav#primary
-    %ul
-      %li
-        %a{:href => "/"} Home
-      %li
-        %a{:href => "/about"} About
+  %body
+    %header#main
+    %nav#primary
+      %ul
+        %li
+          %a{:href => "/"} Home
+        %li
+          %a{:href => "/about"} About
 
-  %section#content
-  = yield
+    %section#content
+    = yield
