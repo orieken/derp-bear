@@ -1,3 +1,8 @@
+$blue: #369
+$white: #fff
+$black: #111
+$orange: #FE851F
+
 // This is a sassified version of Eric Meyer's latest reset.css
 // http://meyerweb.com/eric/thoughts/2008/01/15/resetting-again/
 html
@@ -154,9 +159,9 @@ html, body, h1, form, fieldset, legend, ol, li
   :padding 0
 
   body
-    :background #ffffff
+    :background $white
     :background url(/images/shl.png) repeat
-    :color #111111
+    :color $black
     :font-family Georgia, "Times New Roman", Times, serif
     :padding 20px
 
@@ -181,7 +186,7 @@ html, body, h1, form, fieldset, legend, ol, li
 
 #primary li a
   :padding 5px 15px
-  :color #369
+  :color $blue
   :text-shadow 1px 1px 1px #fff
   :text-decoration none
   :-webkit-border-radius 5px
@@ -234,7 +239,7 @@ form
     :text-shadow 0 1px 1px #fff
 
   ol
-    :background #FE851F
+    :background $orange
     :background rgba(255, 255, 255, .3)
     :border-color #e3ebc3
     :border-color rgba(255, 255, 255, .6)
@@ -249,7 +254,7 @@ form
     :margin-bottom 2px
 
   li
-    :background #FE851F
+    :background $orange
     :background rgba(255, 255, 255, .3)
     :border-color #e3ebc3
     :border-color rgba(255, 255, 255, .3)
@@ -279,7 +284,7 @@ form
     :font-size 13px
 
   input[type=submit]
-    :background #FE851F
+    :background $orange
     :border none
     :-moz-border-radius 8px
     :-webkit-border-radius 8px
@@ -288,7 +293,7 @@ form
     :background-image -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E2E2D9), to(#BDBDB5))
     :background-image -moz-linear-gradient(19% 75% 90deg,#BDBDB5, #E2E2D9)
     :background-color #e2e2d9
-    :color #369
+    :color $blue
     :display block
     :font 18px Georgia, "Times New Roman", Times, serif
     :letter-spacing 1px
@@ -305,35 +310,36 @@ form
     :-moz-box-shadow 1px 1px 3px rgba(30, 37, 6, .5)
     :box-shadow 1px 1px 3px rgba(30, 37, 6, .5)
 
-section#history,
-section#examples,
-section#references
-  //:background url(../images/history.png) no-repeat top left
-  :clear none
-  :color #6a6a5d
-  :float left
-  :height 150px
-  :width 350px
-  :opacity .85
-  :padding 15px 15px 0 40px
-  :text-shadow 1px 1px 1px #fff
+  section
+    #history,
+    #examples,
+    #references
+      //:background url(../images/history.png) no-repeat top left
+      :clear none
+      :color #6a6a5d
+      :float left
+      :height 150px
+      :width 350px
+      :opacity .85
+      :padding 15px 15px 0 40px
+      :text-shadow 1px 1px 1px #fff
 
-section#history
-  :width 400px
+    #history
+      :width 400px
 
-  h1
-    :font bold 12px "DroidSansBold", Verdana, sans-serif
-    :text-transform uppercase
+      h1
+        :font bold 12px "DroidSansBold", Verdana, sans-serif
+        :text-transform uppercase
 
-  p
-    :font normal 12px "DroidSansRegular", Verdana, sans-serif
-    :line-height 18px
+      p
+        :font normal 12px "DroidSansRegular", Verdana, sans-serif
+        :line-height 18px
 
 
 a
   :padding 5px 15px
   :text-decoration underline
-  :color #369
+  :color $blue
   :text-shadow 1px 1px 1px #fff
   :-webkit-border-radius 5px
   :-moz-border-radius 5px
