@@ -279,9 +279,10 @@ form
     :font-size 13px
     :width 50px
 
-  input[type=radio],
-  input[type=checkbox]
-    :font-size 13px
+  input
+    [type=radio],
+    [type=checkbox]
+      :font-size 13px
 
   input[type=submit]
     :background $orange
@@ -304,27 +305,28 @@ form
     :text-transform uppercase
 
   input[type="submit"]:hover
-    :background #1e2506
+    :background #BDBDB5
     :cursor pointer
-    :-webkit-box-shadow 1px 1px 3px rgba(30, 37, 6, .5)
-    :-moz-box-shadow 1px 1px 3px rgba(30, 37, 6, .5)
-    :box-shadow 1px 1px 3px rgba(30, 37, 6, .5)
+    :-webkit-box-shadow 1px 1px 3px rgba(189, 189, 181, .6)
+    :-moz-box-shadow 1px 1px 3px rgba(189, 189, 181, .6)
+    :box-shadow 1px 1px 3px rgba(189, 189, 181, .6)
 
-section#history,
-section#examples,
-section#references
-  //:background url(../images/history.png) no-repeat top left
-  :clear none
-  :color #6a6a5d
-  :float left
-  :height 150px
-  :width 350px
-  :opacity .85
-  :padding 15px 15px 0 40px
-  :text-shadow 1px 1px 1px #fff
+section
+  #history,
+  #examples,
+  #references
+    //:background url(../images/history.png) no-repeat top left
+    :clear none
+    :color #6a6a5d
+    :float left
+    :height 150px
+    :width 350px
+    :opacity .85
+    :padding 15px 15px 0 40px
+    :text-shadow 1px 1px 1px #fff
 
-section#history
-  :width 400px
+  #history
+    :width 400px
 
   h1
     :font bold 12px "DroidSansBold", Verdana, sans-serif
