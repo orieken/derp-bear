@@ -21,6 +21,10 @@ get "/forms/basic_elements_example" do
   haml :basic_form
 end
 
+post '/forms/basic_elements_example' do
+  haml :basic_results
+end
+
 get "/forms/advanced_elements_example" do
   haml :advanced_form
 end

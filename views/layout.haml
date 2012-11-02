@@ -10,9 +10,11 @@
     %nav#primary
       %ul
         %li
-          %a{:href => "/"} Home
+          %a#home_link{:href => "/"} Home
         %li
-          %a{:href => "/about"} About
+          %a#about_link{:href => "/about"} About
 
     %section#content
-    = yield
+      = yield
+
+    %section#results
