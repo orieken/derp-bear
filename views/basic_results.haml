@@ -1,15 +1,38 @@
 %header
-  %h1 Thank you for submitting the form the Results are below!
 
-  %section#results
-
-    = params[:first_name]
-    = params[:last_name]
-    = params[:email]
-    = params[:website_url]
-    = params[:pet_select]
-    = params[:date_of_birth]
-    = params[:sex]
-    = params[:transportation]
-    = params[:password_field]
-    = params[:free_text_area]
+  %section#results.results
+    %header
+      %h1 Thank you for submitting the form the Results are below!
+    %ul
+      %li
+        %fieldset
+          %ol
+            %li
+              %label "#{params[:first_name]}"
+            %li
+              %label
+                = params[:last_name]
+            %li
+              %label
+                = params[:email]
+            %li
+              %label
+                = params[:date_of_birth]
+            %li
+              %label
+                = params[:website_url]
+      %li
+        %label
+          = params[:pet_select]
+      %li
+        %label
+          = params[:sex]
+      %li
+        %label
+          = params[:transportation]
+      %li
+        %label
+          = params[:password_field]
+      %li
+        %label
+          = params[:free_text_area]
