@@ -4,6 +4,7 @@ require 'active_record'
 
 set :haml, {:format => :html5}
 
+
 get '/' do
   haml :index
 end
@@ -27,6 +28,14 @@ end
 
 get "/forms/advanced_elements_example" do
   haml :advanced_form
+end
+
+get "/forms/accordion_example" do
+  haml :accordion
+end
+
+get "/forms/accordion_jquery_example" do
+  haml :accordion_jquery_example
 end
 
 
