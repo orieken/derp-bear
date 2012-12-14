@@ -1,9 +1,11 @@
 !!!
 %html
   %head
-    %meta{ :'http-equiv'=>"Content-Type", :content=>"text/html; charset=utf-8"}/
+    %meta{:'http-equiv'=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     %title= @title || "Welcome to Derp-Bear"
     %link{:rel => 'stylesheet', :href => '/stylesheet.css'}
+    %script{:type => "text/javascript",:src => "http://rightjs.org/hotlink/right.js"}
+    %script{:type => "text/javascript",:src => "/javascripts/results.js"}
 
   %body
     %header#main

@@ -43,6 +43,15 @@ get "/forms/present_elements_example" do
   haml :present_elements_example
 end
 
+post "/forms/present_elements_example" do
+
+end
+
+get '/presents_results' do
+  @text = "Hi, I just loaded"
+  haml :presents_results, :layout => false
+end
+
 get '/examples/:id' do |n|
   @title = "This is Example #{n}!"
   haml :example
