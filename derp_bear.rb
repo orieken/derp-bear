@@ -15,6 +15,7 @@ get '/stylesheet.css' do
 end
 
 get '/about' do
+  @title = "About Derp-Bear"
   haml :about
 end
 
@@ -38,6 +39,9 @@ get "/forms/accordion_jquery_example" do
   haml :accordion_jquery_example
 end
 
+get "/forms/present_elements_example" do
+  haml :present_elements_example
+end
 
 get '/examples/:id' do |n|
   @title = "This is Example #{n}!"

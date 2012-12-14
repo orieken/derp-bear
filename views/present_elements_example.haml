@@ -1,0 +1,17 @@
+%form#random_form{:action => "/forms/no_post", :method => "post"}
+  %legend Form with elements
+  %ul
+    %li#your_information
+      %fieldset
+        %legend Some random elements
+        %ol
+          %li
+            %span#this_span Some Text in a span
+          %li
+            #this_div Text In this place too
+          %li
+            %label{:for => 'random_text_field'} Sup?
+            %input#first_text_field{:type => 'text', :name => 'random_text_field' }
+          %li
+            %label{:for => 'disabled_text_field'} Read Only
+            %input#read_only_text_field{:type => 'text', :name => 'disabled_text_field', :readonly => true, :value => "I am Readonly"  }

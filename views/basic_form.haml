@@ -1,7 +1,7 @@
-%form#submit_example_form{:action => "/forms/basic_elements_example", :method => "post"}
+%form#basic_example_form{:action => "/forms/basic_elements_example", :method => "post"}
   %legend Please Fill in the Form below
   %ul
-    %li
+    %li#your_information
       %fieldset
         %legend Your Information
         %ol
@@ -20,12 +20,12 @@
           %li
             %label{:for => 'pet_select'} Select a Pet
             %select#pet_select{:name => 'pet_select'}
-              %option Cat
-              %option Dog
-              %option Rabbit
-              %option Snake
-              %option Horse
-    %li
+              %option{:value => "2"} Cat
+              %option{:value => "35453453"} Dog
+              %option{:value => "345345"} Rabbit
+              %option{:value => "23"} Snake
+              %option{:value => "3"} Horse
+    %li#date_information
       %fieldset
         %legend Date
         %ol
@@ -45,7 +45,7 @@
           -#%li
           -#  %label{:for => 'week_item'} Week
           -#  %input#week_item{:type => 'week', :name => 'week_item'}
-    %li
+    %li#sex_information
       %fieldset
         %legend What is your Sex?
         %ol
@@ -55,7 +55,7 @@
           %li
             %label.selectors{:for => 'female'} Female
             %input#female{:type => 'radio', :name => 'sex', :value => 'female'}
-    %li
+    %li#transportation_example
       %fieldset
         %legend How do you get to work?
         %ol
@@ -68,14 +68,14 @@
           %li
             %input#walk{:type => 'checkbox', :name => 'transportation', :value => 'walk'}
             %label.selectors{:for => 'walk'} Walk
-    %li
+    %li#password_example
       %fieldset
         %legend Password Example
         %ol
           %li
             %label{:for => 'password_field'} Example password
             %input#password_field{:type => 'password', :name => 'password_field', :placeholder => "Enter Password"}
-    %li
+    %li#tos_example
       %fieldset
         %legend Terms of Agreement
         %ol
@@ -85,11 +85,11 @@
           %li
             %label{:for => 'read_only_text_area'} Read only Text Field
             %textarea#read_only_text_area{:name => 'Read_only_text_area', :rows => 4, :cols => 40, :readonly => true} This text is read only!
-    %li
+    %li#hidden_field_example
       %fieldset
         %label{:for => "hi_im_hidden"} Hidden Field
         %hidden#hi_im_hidden{:name => 'hi_im_hidden', :value => 'This element is hidden!'}
-    %li
+    %li#submit_example
       %fieldset
         %input.submit_button{:type => "submit", :value => "Submit" }
 

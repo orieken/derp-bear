@@ -179,7 +179,6 @@ html, body, h1, form, fieldset, legend, ol, li
   :text-transform uppercase
   :letter-spacing 1px
 
-
 #primary ul li
   :display inline
   :padding-left 43px
@@ -269,7 +268,9 @@ form,
     :padding 5px 10px
     :margin-bottom 2px
 
-  label
+  label,
+  span,
+  .this_div
     :color rgba(51, 102, 153, .8)
     :float left
     :font-size 13px
@@ -293,7 +294,7 @@ form,
     :-khtml-border-radius 8px
     :border-radius 8px
     :background-image -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E2E2D9), to(#BDBDB5))
-    :background-image -moz-linear-gradient(19% 75% 90deg,#BDBDB5, #E2E2D9)
+    :background-image -moz-linear-gradient(19% 75% 90deg, #BDBDB5, #E2E2D9)
     :background-color #e2e2d9
     :color $blue
     :display block
@@ -305,7 +306,7 @@ form,
     :text-shadow 0 1px 1px #000000
     :text-transform uppercase
 
-  input[type="submit"]:hover
+  input[type=submit]:hover
     :background #BDBDB5
     :cursor pointer
     :-webkit-box-shadow 1px 1px 3px rgba(189, 189, 181, .6)
@@ -336,7 +337,6 @@ section
   p
     :font normal 12px "DroidSansRegular", Verdana, sans-serif
     :line-height 18px
-
 
 a
   :padding 5px 15px
