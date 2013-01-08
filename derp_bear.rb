@@ -41,6 +41,10 @@ end
 
 get "/forms/present_elements_example" do
   haml :present_elements_example
+  end
+
+get "/ui_widgets/kendo_ui" do
+  haml :kendi_ui_examples
 end
 
 post "/forms/present_elements_example" do
