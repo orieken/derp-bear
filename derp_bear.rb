@@ -45,6 +45,10 @@ get "/forms/present_elements_example" do
 
 get "/ui_widgets/kendo_ui" do
   haml :kendi_ui_examples
+  end
+
+get "/ui_widgets/sencha_touch" do
+  haml :sencha_touch_examples
 end
 
 post "/forms/present_elements_example" do
