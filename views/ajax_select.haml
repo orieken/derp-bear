@@ -1,0 +1,19 @@
+%form#basic_example_form{:action => "/forms/basic_elements_example", :method => "post"}
+  %legend Please Select a Year and Make
+  %ul
+    %li#your_information
+      %fieldset
+        %legend Vehicle Information
+        %ol
+          %li
+            %select#universal-year.vehicle-year{:name=>'vehicle.year'}
+              %option{:value => "select year"}= "Select Year"
+              - @years.each do |year|
+                %option{:value => year}= year
+          %li
+            %select#universal-make.vehicle-make{:name=>'vehicle.make'}
+              %option{:value => "select make"}= "Select Make"
+              - @makes.each do |make|
+                %option{:value => make}= make
+          %li
+            %input#search_button.button{:type=>'submit', :value=>'Submit'}

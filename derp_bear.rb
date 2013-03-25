@@ -41,14 +41,22 @@ end
 
 get "/forms/present_elements_example" do
   haml :present_elements_example
-  end
+end
 
 get "/ui_widgets/kendo_ui" do
   haml :kendi_ui_examples
-  end
+end
 
 get "/ui_widgets/sencha_touch" do
   haml :sencha_touch_examples
+end
+
+get "/forms/ajax_select" do
+  @years = (1983...2013).to_a
+  @makes = %w(Acura Audi BMW Buick Cadillac Chevrolet Chrysler Dodge Ford GMC Honda Hyundai Infiniti Jaguar Jeep Kia
+   Land Rover Lexus Lincoln MINI Mazda Mercedes-Benz Mercury Mitsubishi Nissan Porsche RAM Scion Saab Smart Subaru Suzuki Toyota Volkswagen Volvo)
+
+  haml :ajax_select
 end
 
 post "/forms/present_elements_example" do
