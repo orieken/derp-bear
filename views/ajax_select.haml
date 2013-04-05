@@ -1,3 +1,7 @@
+%script{:type => "text/javascript",:src => "http://code.jquery.com/jquery-1.9.1.js"}
+%script{:type => "text/javascript",:src => "http://code.jquery.com/ui/1.10.2/jquery-ui.js"}
+%script{:type => "text/javascript",:src => "/javascripts/ajax_select.js"}
+
 %form#basic_example_form{:action => "/forms/basic_elements_example", :method => "post"}
   %legend Please Select a Year and Make
   %ul
@@ -6,14 +10,14 @@
         %legend Vehicle Information
         %ol
           %li
-            %select#universal-year.vehicle-year{:name=>'vehicle.year'}
+            %select#universal_year.vehicle-year{:name=>'vehicle.year'}
               %option{:value => "select year"}= "Select Year"
               - @years.each do |year|
                 %option{:value => year}= year
           %li
-            %select#universal-make.vehicle-make{:name=>'vehicle.make'}
+            %select#universal_make.vehicle-make{:name=>'vehicle.make', :disabled => true}
               %option{:value => "select make"}= "Select Make"
               - @makes.each do |make|
                 %option{:value => make}= make
           %li
-            %input#search_button.button{:type=>'submit', :value=>'Submit'}
+            %input#submit_ajax.button{:type=>'submit', :value=>'Submit', :disabled => true}
