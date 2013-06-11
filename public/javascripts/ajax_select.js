@@ -20,4 +20,11 @@ $universal_year.change(function()
     else {
         $universal_make.attr('disabled', 'disabled');
     }
-}).trigger('change'); // added trigger to calculate initial universal_year
+}).trigger('change').spinner(); // added trigger to calculate initial universal_year
+
+//playing around with ajax loading
+$('#loadingDiv').hide().ajaxStart( function() {
+    $(this).show();  // show Loading Div
+} ).ajaxStop ( function(){
+    $(this).hide(); // hide loading div
+});

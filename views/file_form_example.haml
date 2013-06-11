@@ -1,0 +1,6 @@
+%form#file_upload.file_upload{ :action => "/upload", :enctype => "multipart/form-data", :method => "post"}
+  %div
+    %input{ :name => "authenticity_token", :type => "hidden", :value => "jyzTEwkkJt3MjDn7O5IS+EY1gmuayRiBpDtZXumS4TA="}
+
+  %input{ :multiple => "multiple", :name => "original", :type => "file"}
+%div.dropzone Arraste seus arquivos de imagem nesta área ou clique para escolher os arquivos
