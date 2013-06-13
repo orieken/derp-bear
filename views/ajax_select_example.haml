@@ -2,7 +2,7 @@
 %script{:type => "text/javascript",:src => "http://code.jquery.com/ui/1.10.2/jquery-ui.js"}
 %script{:type => "text/javascript",:src => "/javascripts/ajax_select.js"}
 
-%form#basic_example_form{:action => "/forms/basic_elements_example", :method => "post"}
+%form#basic_example_form{:action => "/forms/ajax_select_example_results", :method => "post"}
   %legend Please Select a Year and Make
   %ul
     %li#your_information
@@ -15,12 +15,12 @@
               - @years.each do |year|
                 %option{:value => year}= year
           %li
-            %select#universal_make.vehicle-make{:name=>'vehicle.make', :disabled => true}
+            %select#universal_make.vehicle-make{:name=>'vehicle.make'}
               %option{:value => "select make"}= "Select Make"
               - @makes.each do |make|
                 %option{:value => make}= make
           %li
-            %input#submit_ajax.button{:type=>'submit', :value=>'Submit', :disabled => true}
+            %input#submit_ajax.button{:type=>'submit', :value=>'Submit'}
 
-#loading_div.hidden "Please wait..."
-%img{:src => 'path to your super fancy spinner'}
+/#loading_div.hidden "Please wait..."
+/%img{:src => 'path to your super fancy spinner'}

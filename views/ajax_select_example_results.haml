@@ -1,0 +1,10 @@
+%header
+
+  %section#ajax_results.ajax_results
+    %header
+      %h1 Thank you for submitting the form
+      -#
+      -#- params.each do |pr|
+      -#  %div= pr
+      %input#first_name{:type => 'text', :name=>'vehicle.year', :value => params["vehicle.year"], :readonly => true }
+      %input#first_name{:type => 'text', :name=>'vehicle.make', :value => params["vehicle.make"], :readonly => true }

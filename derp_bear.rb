@@ -67,6 +67,10 @@ get "/forms/ajax_select_example" do
   haml :ajax_select_example
 end
 
+post "/forms/ajax_select_example_results" do
+  haml :ajax_select_example_results
+end
+
 post "/forms/present_elements_example" do
 
 end
