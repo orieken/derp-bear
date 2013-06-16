@@ -59,6 +59,14 @@ get "/high_charts/high_charts_example" do
   haml :high_charts_example
 end
 
+get "/mobile/examples" do
+  haml :mobile_examples, layout: false
+end
+
+post "/forms/mobile_form_example" do
+  haml :mobile_examples_results, layout: false
+end
+
 get "/forms/ajax_select_example" do
   @years = (1983...2013).to_a
   @makes = %w(Acura Audi BMW Buick Cadillac Chevrolet Chrysler Dodge Ford GMC Honda Hyundai Infiniti Jaguar Jeep Kia

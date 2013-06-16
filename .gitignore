@@ -19,6 +19,10 @@ tmp
 _yardoc
 doc/
 
+.DS_Store
+.sass-cache/
+bin/
+
 # not sure i want to remove these
 .rvmrc
 ##############
