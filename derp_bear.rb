@@ -20,6 +20,7 @@ get '/about' do
 end
 
 get "/forms/basic_form_example" do
+  @title = "Basic Form Example"
   haml :basic_form_example
 end
 
