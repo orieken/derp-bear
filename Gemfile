@@ -1,4 +1,5 @@
-source :rubygems
+source 'https://rubygems.org'
+ruby '1.9.3'
 
 gem 'sinatra'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
@@ -15,16 +16,11 @@ gem 'activerecord'
 gem 'factory_girl'
 gem 'accept_values_for'
 gem 'pg'
-gem 'rake'
 
 group :test do
   gem 'cucumber'
  	gem 'rspec'
-  gem 'autotest'
-  gem 'autotest-fsevent'
-  gem 'autotest-growl'
  	gem 'watir-webdriver'
-  gem 'capybara'
 end
 
 

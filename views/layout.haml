@@ -15,7 +15,13 @@
           %a#home_link{:href => "/"} Home
         %li
           %a#about_link{:href => "/about"} About
-
+        %li
+          - if admin?
+            %a#logout_link{:href => "/logout"} Logout
+          - else
+            %a#login_link{:href => "/login"} Login
+    %section#messages
+      = styled_flash
     %section#content
       = yield
 
