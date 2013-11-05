@@ -1,0 +1,15 @@
+%script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"}
+%script{:type => "text/javascript", :src => "http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"}
+%script{:type => "text/javascript", :src => "/javascripts/knockoutjs/basic_knockout.js"}
+
+%form{data: {bind: "submit: addItem" } }
+  %fieldset
+    %legend Knockoutjs simple list example!
+    %ol
+      %li
+        %label{for: 'add_item'} Add an Item
+        %input#add_item{data: {bind: 'value: itemToAdd, valueUpdate: "afterkeydown"'}, name: 'add_item'}
+        %input{type: "submit", data: { bind: "enable: itemToAdd().length > 0" }, value: 'Add'}
+      %li
+        %label{for: 'your_items_list'} Your items:
+        %select#your_items_list{data: {bind: "options: items"}, multiple: "multiple", name: 'your_items_list' }

@@ -2,6 +2,9 @@ require 'sinatra'
 require 'active_record'
 require 'sinatra/flash'
 
+#require 'sinatra/json'
+#require 'json'
+
 configure do
 
 end
@@ -28,6 +31,11 @@ end
 get "/forms/basic_form_example" do
   @title = "Basic Form Example"
   haml :basic_form_example
+end
+
+get "/basic_element_example" do
+  @title = "Basic Element Example"
+  haml :basic_element_example
 end
 
 get "/forms/file_upload_form_example" do
@@ -136,9 +144,17 @@ get '/logout' do
   redirect '/'
 end
 
-
 get '/top_secret' do
   protected!
   @title = "Hey!, You should not be here!"
   haml :top_secret
+end
+
+post '/json_request' do
+  data = JSON.parse(request.body.read)
+  json data
+end
+
+get '/js_frameworks/knockoutjs_example' do
+  haml :knockoutjs_example
 end
