@@ -33,6 +33,15 @@ get "/forms/basic_form_example" do
   haml :basic_form_example
 end
 
+get "/basic_element_example" do
+  @title = "Basic Element Example"
+  haml :basic_element_example
+end
+
+get "/forms/file_upload_form_example" do
+  haml :file_form_example
+end
+
 post '/forms/basic_form_example' do
   haml :basic_results
 end
