@@ -33,6 +33,10 @@ get "/forms/basic_form_example" do
   haml :basic_form_example
 end
 
+post '/forms/basic_form_example' do
+  haml :basic_results
+end
+
 get "/basic_element_example" do
   @title = "Basic Element Example"
   haml :basic_element_example
@@ -40,10 +44,6 @@ end
 
 get "/forms/file_upload_form_example" do
   haml :file_form_example
-end
-
-post '/forms/basic_form_example' do
-  haml :basic_results
 end
 
 get "/forms/advanced_elements_example" do
@@ -157,4 +157,16 @@ end
 
 get '/js_frameworks/knockoutjs_example' do
   haml :knockoutjs_example
+end
+
+get '/popup_example' do
+  haml :popup_example
+end
+
+get '/forms/simple_form_example' do
+  haml :simple_form_example
+end
+
+post '/forms/simple_form_example' do
+  haml :simple_form_results
 end

@@ -1,0 +1,25 @@
+%header
+
+  %section#results.results
+    %header
+      %h1 Thank you #{params[:first_name].capitalize}for submitting the form
+      %ul
+        %li
+          %fieldset
+            %legend Your Information
+            %ol
+              %li
+                %label{:for => 'first_name'} First Name
+                %input#first_name{:type => 'text', :name => 'first_name', :value => params[:first_name].capitalize, :readonly => true }
+              %li
+                %label{:for => 'last_name'} Last Name
+                %input#last_name{:type => 'text', :name => 'last_name', :value => params[:last_name].capitalize, :readonly => true }
+              %li
+                %label{:for => 'email'} Email
+                %input#email{:type => 'email', :name => 'email',  :value => params[:email], :readonly => true }
+              %li
+                %label{:for => 'website_url'} Website
+                %input#website_url{:type => 'url', :name => 'website_url', :value => params[:website_url], :readonly => true }
+              %li
+                %label{:for => 'pet_select'} Select a Pet
+                %input#last_name{:type => 'text', :name => 'pet_select', :value => params[:pet_select].capitalize, :readonly => true }

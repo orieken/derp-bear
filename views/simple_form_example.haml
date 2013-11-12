@@ -1,0 +1,30 @@
+%form#simple_example_form{:action => "/forms/simple_form_example", :method => "post"}
+  %legend Please Fill in the Form below
+  %ul
+    %li#your_information
+      %fieldset
+        %legend Your Information
+        %ol
+          %li
+            %label{:for => 'first_name'} First Name
+            %input#first_name{:type => 'text', :name => 'first_name', :placeholder => "First Name", :required => true }
+          %li
+            %label{:for => 'last_name'} Last Name
+            %input#last_name{:type => 'text', :name => 'last_name', :placeholder => "Last Name", :required => true}
+          %li
+            %label{:for => 'email'} Email
+            %input#email{:type => 'email', :name => 'email', :placeholder => "name@example.com", :required => true}
+          %li
+            %label{:for => 'website_url'} Website
+            %input#website_url{:type => 'url', :name => 'website_url'}
+          %li
+            %label{:for => 'pet_select'} Select a Pet
+            %select#pet_select{:name => 'pet_select'}
+              %option{:value => "cat"} Cat
+              %option{:value => "dog"} Dog
+              %option{:value => "rabbit"} Rabbit
+              %option{:value => "snake"} Snake
+              %option{:value => "horse"} Horse
+          %li#submit_example
+            %fieldset
+              %input.submit_button{:type => "submit", :value => "Submit" }
