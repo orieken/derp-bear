@@ -179,3 +179,11 @@ end
 post '/forms/simple_form_example' do
   haml :simple_form_results
 end
+
+get '/elements/table_example' do
+  haml :table_example
+end
+
+get '/widgets/knockoutjs_experiment' do
+  haml :knockoutjs_experiment
+end
