@@ -3,9 +3,6 @@
   %head
     %meta{:'http-equiv'=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     %title= @title || "Welcome to Derp-Bear"
-    %link{:rel => 'stylesheet', :href => '/stylesheet.css'}
-    %script{:type => "text/javascript",:src => "http://rightjs.org/hotlink/right.js"}
-    %script{:type => "text/javascript",:src => "/javascripts/results.js"}
 
   %body
     %header#main
@@ -26,3 +23,12 @@
       = yield
 
     %section#results
+
+  %footer
+    %link{:rel => 'stylesheet', :href => '/stylesheet.css'}
+    %link{:rel => "stylesheet", :href => "http://yandex.st/highlightjs/7.5/styles/railscasts.min.css" }
+    %script{:type => "text/javascript",:src => "http://rightjs.org/hotlink/right.js"}
+    %script{:type => "text/javascript",:src => "/javascripts/results.js"}
+    %script{:type => "text/javascript", :src => "http://yandex.st/highlightjs/7.5/highlight.min.js" }
+    %script{:type => "text/javascript" }
+      hljs.initHighlightingOnLoad();
