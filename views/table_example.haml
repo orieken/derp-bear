@@ -25,9 +25,3 @@
 %section#code
   %pre
     %code
-      @browser = Watir::Browser.new :chrome
-      def list_of_people
-        @browser.ul(id: 'list_of_people')
-      end
-      list_of_people.lis.count
-
