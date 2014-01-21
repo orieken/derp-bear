@@ -1,0 +1,21 @@
+%script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"}
+%script{:type => "text/javascript", :src => "http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"}
+%script{:type => "text/javascript", :src => "/javascripts/knockoutjs/table_challenge/table_challenge.js"}
+
+%table.table.table-striped.table-hover{cellspacing: '0'}
+  %thead
+    %tr{data: { bind: "foreach: headings"}}
+      %th{data: { bind: "text: columnHeading"}}
+  %tbody{data: { bind: "foreach: cars"}}
+    %tr{data: { bind: "attr: {'id': 'track_item_' + $index() }"}}
+      %td{data: { bind: "text: time"}}
+      %td{data: { bind: "text: make, attr: {'id': make.toLowerCase() + '_' + $index() }"}}
+      %td{data: { bind: "text: model, attr: {'id': model.toLowerCase() + '_' +$index() }"}}
+      %td{data: { bind: "text: track"}}
+      %td{data: { bind: "text: season"}}
+      %td{data: { bind: "text: episode"}}
+
+-#%span{data: { bind: "text: $index"}} :
+-#%span{data: { bind: "text: firstName, attr: {'id': 'first_name_' + $index() }"}}
+-#%span{data: { bind: "text: lastName, attr: {'id': 'last_name_' + $index() }" }}
+-#%span{data: { bind: "text: position, attr: {'id': 'position_' + $index() }" }}

@@ -1,17 +1,9 @@
 require 'sinatra'
-require 'active_record'
 require 'sinatra/flash'
 
-#require 'sinatra/json'
-#require 'json'
-
-configure do
-
-end
-
 enable :sessions
+set :session_secret, '*&(^B234'
 set :haml, {:format => :html5}
-
 
 get '/' do
   haml :index
@@ -186,4 +178,8 @@ end
 
 get '/widgets/knockoutjs_experiment' do
   haml :knockoutjs_experiment
+end
+
+get '/table_challenges' do
+  haml :table_challenges
 end
