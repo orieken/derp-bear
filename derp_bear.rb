@@ -183,3 +183,7 @@ end
 get '/table_challenges' do
   haml :table_challenges
 end
+
+get '/select_lists' do
+  haml :select_lists
+end

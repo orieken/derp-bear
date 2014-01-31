@@ -1,0 +1,12 @@
+%select.exp_left_hand.form-control
+  %option{value: ""} Please select
+  %optgroup{label:"Users"}
+    %option{data:{s:"false"}, value: "countrycode"}countrycode
+    %option{data:{s:"true"},value: "u.visitor" } Visitor
+    %option{data:{s: "false"}, value: "keyword"} keyword
+  %optgroup{class: "identifier", label: "Keywords"}
+    %option{data:{s: "false"}, value: "smart" } smart
+    %option{data:{s: "false"}, value: "purchasehistorybyattributes" }purchasehistorybyattributes
+    %option{data:{s:'false'}, value: "purchasehistorybycategory"} purchasehistorybycategory
+    %option{data:{s: 'false'}, value: 'tags'} tags
+

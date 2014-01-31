@@ -2,20 +2,45 @@
 %script{:type => "text/javascript", :src => "http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"}
 %script{:type => "text/javascript", :src => "/javascripts/knockoutjs/table_challenge/table_challenge.js"}
 
-%table.table.table-striped.table-hover{cellspacing: '0'}
-  %thead
-    %tr{data: { bind: "foreach: headings"}}
-      %th{data: { bind: "text: columnHeading"}}
-  %tbody{data: { bind: "foreach: cars"}}
-    %tr{data: { bind: "attr: {'id': 'track_item_' + $index() }"}}
-      %td{data: { bind: "text: time"}}
-      %td{data: { bind: "text: make, attr: {'id': make.toLowerCase() + '_' + $index() }"}}
-      %td{data: { bind: "text: model, attr: {'id': model.toLowerCase() + '_' +$index() }"}}
-      %td{data: { bind: "text: track"}}
-      %td{data: { bind: "text: season"}}
-      %td{data: { bind: "text: episode"}}
+%div#regular_table_panel.panel.panel-default
+  %div#regular_table.panel-body
+    %table.table.table-striped.table-hover{cellspacing: '0'}
+      %thead
+        %tr{data: { bind: "foreach: headings"}}
+          %th{data: { bind: "text: columnHeading"}}
+      %tbody{data: { bind: "foreach: cars"}}
+        %tr{data: { bind: "attr: {'id': 'track_item_' + $index() }"}}
+          %td{data: { bind: "text: time"}}
+          %td{data: { bind: "text: make, attr: {'id': make.toLowerCase() + '_' + $index() }"}}
+          %td{data: { bind: "text: model, attr: {'id': model.toLowerCase() + '_' +$index() }"}}
+          %td{data: { bind: "text: track"}}
+          %td{data: { bind: "text: season"}}
+          %td{data: { bind: "text: episode"}}
 
--#%span{data: { bind: "text: $index"}} :
--#%span{data: { bind: "text: firstName, attr: {'id': 'first_name_' + $index() }"}}
--#%span{data: { bind: "text: lastName, attr: {'id': 'last_name_' + $index() }" }}
--#%span{data: { bind: "text: position, attr: {'id': 'position_' + $index() }" }}
+%div#div_table.panel.panel-default
+  %div#div_table.panel-body
+    %div.table
+      %div#div_table_header.row
+        %div.col-md-2 Time
+        %div.col-md-2 Make
+        %div.col-md-3 Model
+        %div.col-md-2 Track Conditions
+        %div.col-xs-1 Season
+        %div.col-xs-1 Episode
+      %div{data: { bind: "foreach: cars"}}
+        %div.row{data: { bind: "attr: {'id': 'track_item_' + $index() }"}}
+          %div.col-md-2{data: { bind: "text: time"}}
+          %div.col-md-2{data: { bind: "text: make, attr: {'id': make.toLowerCase() + '_' + $index() }"}}
+          %div.col-md-3{data: { bind: "text: model, attr: {'id': model.toLowerCase() + '_' +$index() }"}}
+          <!-- ko if: track -->
+          %div.col-md-2{data: { bind: "text: track"}}
+          <!-- /ko -->
+          %div.col-xs-1{data: { bind: "text: season"}}
+          %div.col-xs-1{data: { bind: "text: episode"}}
+
+
+    -#%span{data: { bind: "text: $index"}} :
+    -#%span{data: { bind: "text: firstName, attr: {'id': 'first_name_' + $index() }"}}
+    -#%span{data: { bind: "text: lastName, attr: {'id': 'last_name_' + $index() }" }}
+    -#%span{data: { bind: "text: position, attr: {'id': 'position_' + $index() }" }}
+

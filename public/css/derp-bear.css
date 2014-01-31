@@ -1,3 +1,24 @@
 #main{
     padding-top: 50px;
 }
+
+.exp_left_hand {
+    margin-left: 25px;
+    margin-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 300px;
+}
+
+#regular_table,
+#div_table{
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+#regular_table_panel,
+#div_table_panel{
+    margin-left: 25px;
+    margin-right: 25px;
+}
