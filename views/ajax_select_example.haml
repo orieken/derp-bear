@@ -2,25 +2,26 @@
 %script{:type => "text/javascript",:src => "http://code.jquery.com/ui/1.10.2/jquery-ui.js"}
 %script{:type => "text/javascript",:src => "/javascripts/ajax_select.js"}
 
-%form#basic_example_form{:action => "/forms/ajax_select_example_results", :method => "post"}
+%form#basic_example_form{action: "/forms/ajax_select_example_results", method: "post"}
   %legend Please Select a Year and Make
-  %ul
-    %li#your_information
+  %ul.form-group
+
+    %li#your_information.control-group
       %fieldset
         %legend Vehicle Information
         %ol
-          %li
-            %select#universal_year.vehicle-year{:name=>'vehicle.year'}
-              %option{:value => "select year"}= "Select Year"
+          %li.form-group
+            %select#universal_year.vehicle-year.btn-md.btn-primary{name: 'vehicle.year'}
+              %option{value: "select year"}= "Select Year"
               - @years.each do |year|
-                %option{:value => year}= year
-          %li
-            %select#universal_make.vehicle-make{:name=>'vehicle.make'}
-              %option{:value => "select make"}= "Select Make"
+                %option{value: year}= year
+          %li.form-group
+            %select#universal_make.vehicle-make.btn-md.btn-primary{name: 'vehicle.make'}
+              %option{value: "select make"}= "Select Make"
               - @makes.each do |make|
-                %option{:value => make}= make
-          %li
-            %input#submit_ajax.button{:type=>'submit', :value=>'Submit'}
+                %option{value: make}= make
+          %li.form-group
+            %input#submit_ajax.button.btn.btn-default{type: 'submit', value: 'Submit'}
 
 /#loading_div.hidden "Please wait..."
 /%img{:src => 'path to your super fancy spinner'}
