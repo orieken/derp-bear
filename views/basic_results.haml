@@ -4,66 +4,72 @@
     %header
       %h1 Thank you for submitting the form
       %ul
-        %li
+
+        %li.control-group
           %fieldset
             %legend Your Information
             %ol
-              %li
-                %label{:for => 'first_name'} First Name
-                %input#first_name{:type => 'text', :name => 'first_name', :value => params[:first_name], :readonly => true }
-              %li
-                %label{:for => 'last_name'} Last Name
-                %input#last_name{:type => 'text', :name => 'last_name', :value => params[:last_name], :readonly => true }
-              %li
-                %label{:for => 'email'} Email
-                %input#email{:type => 'email', :name => 'email',  :value => params[:email], :readonly => true }
-              %li
-                %label{:for => 'website_url'} Website
-                %input#website_url{:type => 'url', :name => 'website_url', :value => params[:website_url], :readonly => true }
-              %li
-                %label{:for => 'pet_select'} Select a Pet
-                %input#last_name{:type => 'text', :name => 'pet_select', :value => params[:pet_select], :readonly => true }
-        %li
+              %li.form-group
+                %label{for: 'first_name'} First Name
+                %input#first_name{type: 'text', name: 'first_name', value: params[:first_name], disabled: true }
+              %li.form-group
+                %label{for: 'last_name'} Last Name
+                %input#last_name{type: 'text', name: 'last_name', value: params[:last_name], disabled: true }
+              %li.form-group
+                %label{for: 'email'} Email
+                %input#email{type: 'email', name: 'email', value: params[:email], disabled: true }
+              %li.form-group
+                %label{for: 'website_url'} Website
+                %input#website_url{type: 'url', name: 'website_url', value: params[:website_url], disabled: true }
+              %li.form-group
+                %label{for: 'pet_select'} Select a Pet
+                %input#last_name{type: 'text', name: 'pet_select', value: params[:pet_select], disabled: true }
+
+        %li.control-group
           %fieldset
             %legend Date
             %ol
-              %li
-                %label{:for => 'date_of_birth'} Date of Birth
-                %input#last_name{:type => 'text', :maxlength => '255', :name => 'date_of_birth', :value => params[:date_of_birth], :readonly => true}
-        %li
+              %li.form-group
+                %label{for: 'date_of_birth'} Date of Birth
+                %input#dob{type: 'text', maxlength: '255', name: 'date_of_birth', value: params[:date_of_birth], readonly: true}
+
+        %li.control-group
           %fieldset
             %legend What is your Sex?
             %ol
-              %li
-                %label.selectors{:for => 'male'} Male
-                %input#male{:type => 'radio', :name => 'sex', :value => 'male'}
-              %li
-                %label.selectors{:for => 'female'} Female
-                %input#female{:type => 'radio', :name => 'sex', :value => 'female'}
-        %li
+              %li.form-group
+                .controls
+                  .control-label
+                    %label.radio.radio-inline{for: params[:sex]}
+                      %input#male{type: 'radio', name: 'sex', value: params[:sex], disabled: true}
+                        = params[:sex].capitalize
+
+
+        %li.control-group
           %fieldset
             %legend How do you get to work?
             %ol
-              %li
-                %input#bike{:type => 'checkbox', :name => 'transportation', :value => 'bike'}
-                %label.selectors{:for => 'bike'} Bike
-              %li
-                %input#car{:type => 'checkbox', :name => 'transportation', :value => 'car'}
-                %label.selectors{:for => 'car'} Car
-              %li
-                %input#walk{:type => 'checkbox', :name => 'transportation', :value => 'walk'}
-                %label.selectors{:for => 'walk'} Walk
-        %li
+              %li.form-group
+                .controls
+                  .control-label
+                    %label.checkbox.checkbox-inline{for: params[:transportation]}
+                      %input#bike.switch.switch-square{type: 'checkbox', name: 'transportation', value: params[:transportation], disabled: true}
+                        = params[:transportation].capitalize
+
+
+        %li.control-group
           %fieldset
             %legend Password Example
             %ol
-              %li
-                %label{:for => 'password_field'} Example Password
-                %input#password_field{:type => 'text', :name => 'password_field', :value => params[:password], :readonly => true}
-        %li
+              %li.form-group
+                %label{for: 'password_field'} Example Password
+                %input#password_field{type: 'text', name: 'password_field', value: params[:password], disabled: true}
+
+        %li.control-group
           %fieldset
             %legend Terms of Agreement
             %ol
-              %li
-                %label{:for => 'free_text_area'} Free Text Field
-                %textarea#free_text_area{:name => 'free_text_area', :rows => 4, :cols => 40 , :readonly => true}= params[:free_text_area]
+              %li.form-group
+                %label{for: 'free_text_area'} Free Text Field
+                %textarea#free_text_area{name: 'free_text_area', rows: 4, cols: 40 , disabled: true}
+                  = params[:free_text_area]
