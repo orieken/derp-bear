@@ -1,22 +1,28 @@
-%form#random_form{:action => "/forms/present_elements_example", :method => "post"}
+%form#random_form{action: "/forms/present_elements_example", method: "post"}
   %legend Form with elements
-  %ul
+  %ul.control-group
     %li#your_information
       %fieldset
         %legend Some random elements
         %ol
-          %li
+          %li.form-group
             %span#this_span.this_span_class Some Text in a span
-          %li
+
+          %li.form-group
             #this_div.this_div_class Text In this place too
-          %li
-            %label{:for => 'random_text_field'} Sup?
-            %input#first_text_field{:type => 'text', :name => 'random_text_field' }
-          %li
-            %label{:for => 'disabled_text_field'} Read Only
-            %input#read_only_text_field.readonly_class{:type => 'text', :name => 'disabled_text_field', :readonly => true, :value => "I am Readonly"  }
-          %li
-            %label{:for => 'submit_button'} Submit me for a span
-            %input#submit_button{:type => 'submit', :value => 'submit' }
+
+          %li.form-group
+            %label{for: 'random_text_field'}
+              %input#first_text_field{type: 'text', name: 'random_text_field' }
+                Sup?
+
+          %li.form-group
+            %label{:for => 'disabled_text_field'}
+              %input#read_only_text_field.readonly_class{type: 'text', name: 'disabled_text_field', readonly: true, value: "I am Readonly", disabled: true  }
+                Read Only
+
+          %li.form-group
+            %label.form-control{for: 'submit_button'} Submit me for a span
+            %input#submit_button.btn.btn-default{type: 'submit', value: 'Submit' }
 
 #msg
