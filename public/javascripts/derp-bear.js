@@ -1,7 +1,7 @@
 /**
  * Created by bisbot on 1/31/14.
  */
-$("select").selectpicker({
+$('select').selectpicker({
     style: 'btn-md btn-primary',
     menuStyle: 'dropdown-inverse'
 });
