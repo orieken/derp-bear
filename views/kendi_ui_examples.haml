@@ -1,3 +1,4 @@
+%script{type: "text/javascript",src: "http://cdn.kendostatic.com/2013.2.716/js/kendo.all.min.js"}
 
 %h1 This Example was taken from the KendoUI trial
 %section#kendo_ui_drop_down
@@ -6,13 +7,7 @@
       Customize your Kendo Cap
       %div Cap Size
       #cap_size
-        %select#size
-          %option S - 6 3/4
-          %option M - 7 1/4
-          %option L - 7 1/8
-          %option XL - 7 5/8
-
-
+        %input#size{ value: 's'}
 
       %div
         Cap Color
@@ -24,15 +19,61 @@
 
 %section
   #information
-    %a#kendo_ui_link{href: "http://www.kendoui.com/download/download-kendo.aspx?pId=900&lict=3"} Kendo UI Download
+    %a#kendo_ui_link{href: "http://docs.telerik.com/kendo-ui/getting-started/javascript-dependencies"} Kendo UI Download
   #drop_down_example.k-content
-    %a#kendo_ui_drop_down_list_example{href: "http://demos.kendoui.com/web/dropdownlist/index.html" } Kendo UI DropDownList Example
-
+    %a#kendo_ui_drop_down_list_example{href: "http://demos.telerik.com/kendo-ui/web/dropdownlist/index.html" } Kendo UI DropDownList Example
 
 %link{rel: 'stylesheet', href: '/javascripts/kendo_ui/shared/styles/examples-offline.css'}
 %link{rel: 'stylesheet', href: '/javascripts/kendo_ui/kendo.common.min.css'}
 %link{rel: 'stylesheet', href: '/javascripts/kendo_ui/kendo.default.min.css'}
 %link{rel: 'stylesheet', href: '/javascripts/kendo_ui/drop_down_list.css'}
 
-%script{type: "text/javascript",src: "http://cdn.kendostatic.com/2013.2.716/js/kendo.all.min.js"}
-%script{type: "text/javascript",src: "/javascripts/kendo_ui/drop_down_list.js"}
+:javascript
+  var color_list = [
+      { text: "Black", value: "1" },
+      { text: "Orange", value: "2" },
+      { text: "Grey", value: "3" }
+  ];
+
+  var size_list = [
+      { text: 'S - 6 3/4', value: 's' },
+      { text: 'M - 7 1/4', value: 'm' },
+      { text: 'L - 7 1/8', value: 'l' },
+      { text: 'XL - 7 5/8', value: 'xl' }
+  ];
+
+  // create DropDownList from input HTML element
+  $('#color').kendoDropDownList({
+      dataTextField: "text",
+      dataValueField: "value",
+      dataSource: color_list,
+      index: 0,
+      change: onChange
+  });
+
+  // create DropDownList from select HTML element
+  $('#size').kendoDropDownList({
+        dataTextField: "text",
+        dataValueField: "value",
+        dataSource: size_list,
+        index: 0,
+        change: onChange
+  });
+
+  var color = $('#color').data("kendoDropDownList");
+  color.select(0);
+
+  var size = $('#size').data("kendoDropDownList");
+  size.select(0);
+
+  function onChange() {
+      var value = $('#color').val();
+      $('#cap')
+          .toggleClass("black-cap", value == 1)
+          .toggleClass("orange-cap", value == 2)
+          .toggleClass("grey-cap", value == 3);
+  };
+
+  $('#get').click(function() {
+      alert('Thank you! Your Choice is:\n\nColor ID: ' + color.text() + ' and Size: ' + size.text());
+  });
