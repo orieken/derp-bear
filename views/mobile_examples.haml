@@ -1,31 +1,30 @@
 !!!
 %html
   %head
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-    %meta{:'http-equiv'=>"Content-Type", :content=>"text/html; charset=utf-8"}/
-    %title= @title || "Welcome to Derp-Bear"
-    %link{:rel => 'stylesheet', :href => '/javascripts/bootstrap/bootstrap.css'}
-    %link{:rel => 'stylesheet', :href => '/javascripts/bootstrap/bootstrap-responsive.css'}
-    %link{:rel => 'stylesheet', :href => '/javascripts/bootstrap/extra.css'}
-    %script{:type => "text/javascript",:src => "http://code.jquery.com/jquery.js"}
-    %script{:type => "text/javascript",:src => "/javascripts/bootstrap/bootstrap.js"}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    %meta{http: {equiv: 'Content-Type'}, content: "text/html; charset=utf-8"}
+    %title= @title || 'Welcome to Derp-Bear'
+    %link{rel: 'stylesheet', href: '/bootstrap/css/bootstrap.css'}
+    %link{rel: 'stylesheet', href: '/css/derp-bear.css'}
+    %script{src: '/flatui/js/jquery-1.8.3.min.js'}
+    %script{type: 'text/javascript',src: "/bootstrap/js/bootstrap.js"}
 
 %body
   .container-narrow
     .masthead
       %ul#navigation.nav.nav-pills.pull-right
         %li#home.active
-          %a#home_link{:href => "/"} Home
+          %a#home_link{href: "/"} Home
         %li#about
-          %a#about_link{:href => "/about"} About
+          %a#about_link{href: "/about"} About
         %li#contact
-          %a{:href => "#"} Contact
+          %a{href: "#"} Contact
       %h3#project_name.muted Derp-Bear Mobile Examples
     %hr
     .jumbotron
       %h1#main_title Derp-Bear Examples!
       %p#lead_text.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar augue vitae venenatis pulvinar. Vestibulum ultrices lacinia venenatis. Aenean sed risus id mi pharetra mollis. Praesent eget tempus mi. Aliquam viverra mauris lectus, non porttitor elit dapibus et. Donec a mauris tincidunt, rutrum diam ut, malesuada massa. Vivamus eu mi pulvinar, feugiat nulla sollicitudin, tincidunt leo. Phasellus imperdiet scelerisque mollis. In convallis dui nibh, eu luctus mauris molestie sit amet. Cras id purus eget leo rutrum placerat. Phasellus at dictum erat. Aenean eu egestas diam. Sed non magna aliquet, auctor elit nec, ullamcorper tortor. Vivamus egestas, turpis ac rutrum fermentum, sapien magna dignissim sapien, a ullamcorper quam libero ut eros. Phasellus tincidunt convallis molestie.
-      %a#submit_lead.btn.btn-large.btn-success{:href => "#mobile_form_example"} Sign-Up Today
+      %a#submit_lead.btn.btn-large.btn-success{href: "#mobile_form_example"} Sign-Up Today
     %hr
     .row-fluid.marketing
       .span6
@@ -43,7 +42,7 @@
         %h4 Something
         %p sapien magna dignissim sapien, a ullamcorper quam libero ut eros. Phasellus tincidunt convallis molestie.
     %hr
-    %form#mobile_form_example.form-horizontal{:action => "/forms/mobile_form_example", :method => "post"}
+    %form#mobile_form_example.form-horizontal{action: "/forms/mobile_form_example", method: "post"}
       %legend Please Fill in the Form below
       %ul
         %li#your_information
@@ -51,100 +50,100 @@
             %legend Your Information
             %ol
               %li
-                %label.control-label{:for => 'first_name'} First Name
+                %label.control-label{for: 'first_name'} First Name
                 .controls
-                  %input#first_name.input-xlarge{:type => 'text', :name => 'first_name', :placeholder => "First Name", :required => true }
+                  %input#first_name.input-xlarge{type: 'text', name: 'first_name', placeholder: "First Name", required: true }
               %li
-                %label.control-label{:for => 'last_name'} Last Name
+                %label.control-label{for: 'last_name'} Last Name
                 .controls
-                  %input#last_name.input-xlarge{:type => 'text', :name => 'last_name', :placeholder => "Last Name", :required => true}
+                  %input#last_name.input-xlarge{type: 'text', name:'last_name', placeholder: "Last Name", required: true}
               %li
-                %label.control-label{:for => 'email'} Email
+                %label.control-label{for: 'email'} Email
                 .controls
-                  %input#email.input-xlarge{:type => 'email', :name => 'email', :placeholder => "name@example.com", :required => true}
+                  %input#email.input-xlarge{type: 'email', name: 'email', placeholder: "name@example.com", required: true}
               %li
-                %label.control-label{:for => 'website_url'} Website
+                %label.control-label{for: 'website_url'} Website
                 .controls
-                  %input#website_url.input-xlarge{:type => 'url', :name => 'website_url'}
+                  %input#website_url.input-xlarge{type: 'url', name: 'website_url'}
               %li
-                %label.control-label{:for => 'pet_select'} Select a Pet
+                %label.control-label{for: 'pet_select'} Select a Pet
                 .controls
-                  %select#pet_select.input-xlarge{:name => 'pet_select'}
-                    %option{:value => "2"} Cat
-                    %option{:value => "35453453"} Dog
-                    %option{:value => "345345"} Rabbit
-                    %option{:value => "23"} Snake
-                    %option{:value => "3"} Horse
+                  %select#pet_select.input-xlarge{name: 'pet_select'}
+                    %option{value: "2"} Cat
+                    %option{value: "35453453"} Dog
+                    %option{value: "345345"} Rabbit
+                    %option{value: "23"} Snake
+                    %option{value: "3"} Horse
         %li#date_information
           %fieldset
             %legend Date
             %ol
               %li
-                %label.control-label{:for => 'date_of_birth'} Date of Birth
+                %label.control-label{for: 'date_of_birth'} Date of Birth
                 .controls
-                  %input#date_of_birth.input-xlarge{:type => 'date', :maxlength => '255', :name => 'date_of_birth'}
+                  %input#date_of_birth.input-xlarge{type: 'date', maxlength: '255', name: 'date_of_birth'}
         %li#sex_information
           %fieldset
             %legend What is your Sex?
             %ol
               %li
-                %label.selectors.control-label{:for => 'male'} Male
+                %label.selectors.control-label{for: 'male'} Male
                 .controls
                   %label.radio
-                    %input#male{:type => 'radio', :name => 'sex', :value => 'male'}
+                    %input#male{type: 'radio', name: 'sex', value: 'male'}
               %li
-                %label.selectors.control-label{:for => 'female'} Female
+                %label.selectors.control-label{for: 'female'} Female
                 .controls
                   %label.radio
-                    %input#female{:type => 'radio', :name => 'sex', :value => 'female'}
+                    %input#female{type: 'radio', name: 'sex', value: 'female'}
         %li#transportation_example
           %fieldset
             %legend How do you get to work?
             %ol
               %li
-                %label.control-label{:for => 'bike'} Bike
+                %label.control-label{for: 'bike'} Bike
                 .controls
                   %label.checkbox
-                    %input#bike{:type => 'checkbox', :name => 'transportation', :value => 'bike'}
+                    %input#bike{type: 'checkbox', name: 'transportation', value: 'bike'}
               %li
-                %label.selectors.control-label{:for => 'car'} Car
+                %label.selectors.control-label{for: 'car'} Car
                 .controls
                   %label.checkbox
-                    %input#car{:type => 'checkbox', :name => 'transportation', :value => 'car'}
+                    %input#car{type: 'checkbox', name: 'transportation', value: 'car'}
               %li
-                %label.selectors.control-label{:for => 'walk'} Walk
+                %label.selectors.control-label{for: 'walk'} Walk
                 .controls
                   %label.checkbox
-                    %input#walk{:type => 'checkbox', :name => 'transportation', :value => 'walk'}
+                    %input#walk{type: 'checkbox', name: 'transportation', value: 'walk'}
         %li#password_example
           %fieldset
             %legend Password Example
             %ol
               %li
-                %label.control-label{:for => 'password_field'} Example password
+                %label.control-label{for: 'password_field'} Example password
                 .controls
-                  %input#password_field.input-xlarge{:type => 'password', :name => 'password_field', :placeholder => "Enter Password"}
+                  %input#password_field.input-xlarge{type: 'password', name: 'password_field', placeholder: "Enter Password"}
         %li#tos_example
           %fieldset
             %legend Terms of Agreement
             %ol
               %li
-                %label.control-label{:for => 'free_text_area'} Free Text Field
+                %label.control-label{for: 'free_text_area'} Free Text Field
                 .controls
-                  %textarea#free_text_area.input-xlarge{:name => 'free_text_area', :rows => 4, :cols => 40}
+                  %textarea#free_text_area.input-xlarge{name: 'free_text_area', rows: 4, cols: 40}
               %li
-                %label.control-label{:for => 'read_only_text_area'} Read only Text Field
+                %label.control-label{for: 'read_only_text_area'} Read only Text Field
                 .controls
-                  %textarea#read_only_text_area.input-xlarge{:name => 'Read_only_text_area', :rows => 4, :cols => 40, :readonly => true} This text is read only!
+                  %textarea#read_only_text_area.input-xlarge{name: 'Read_only_text_area', rows: 4, cols: 40, readonly: true} This text is read only!
         %li#hidden_field_example
           %fieldset
-            %label.control-label{:for => "hi_im_hidden"} Hidden Field
+            %label.control-label{for: "hi_im_hidden"} Hidden Field
             .controls
-              %hidden#hi_im_hidden{:name => 'hi_im_hidden', :value => 'This element is hidden!'}
+              %hidden#hi_im_hidden{name: 'hi_im_hidden', value: 'This element is hidden!'}
         %li#submit_example
           %fieldset
             .controls
-              %input.submit_button.input-xlarge{:type => "submit", :value => "Submit" }
+              %input.submit_button.input-xlarge{type: "submit", value: "Submit" }
     %hr
     .footer
       %p Derp-Bear 2013
