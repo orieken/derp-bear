@@ -34,3 +34,9 @@ form{
     padding-left: 40px;
     padding-right: 40px;
 }
+section #kendo_ui_drop_down{
+    height: 500px;
+    width: 400px;
+    padding-left: 20%;
+    padding-right: 20%;
+}

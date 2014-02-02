@@ -1,30 +1,38 @@
-%link{:rel => 'stylesheet', :href => '/javascripts/kendo_ui/shared/styles/examples-offline.css'}
-%link{:rel => 'stylesheet', :href => '/javascripts/kendo_ui/kendo.common.min.css'}
-%link{:rel => 'stylesheet', :href => '/javascripts/kendo_ui/kendo.default.min.css'}
-%link{:rel => 'stylesheet', :href => '/javascripts/kendo_ui/drop_down_list.css'}
-%script{:type => "text/javascript",:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"}
-%script{:type => "text/javascript",:src => "/javascripts/kendo_ui/drop_down_list.js"}
-%script{:type => "text/javascript",:src => "http://cdn.kendostatic.com/2012.3.1114/js/kendo.web.min.js"}
 
 %h1 This Example was taken from the KendoUI trial
 %section#kendo_ui_drop_down
-  %a#kendo_ui_link{:href => "http://www.kendoui.com/download/download-kendo.aspx?pId=900&lict=3"} Kendo UI Download
-  #drop_down_example.k-content
-  %a#kendo_ui_drop_down_list_example{ :href => "http://demos.kendoui.com/web/dropdownlist/index.html" } Kendo UI DropDownList Example
   #cap-view.k-header
-    %h2 Customize your Kendo Cap
-    #cap.black-cap
-    #options
-    %h3 Cap Color
-    #cap_color
-      #color
+    %div
+      Customize your Kendo Cap
+      %div Cap Size
+      #cap_size
+        %select#size
+          %option S - 6 3/4
+          %option M - 7 1/4
+          %option L - 7 1/8
+          %option XL - 7 5/8
 
-    %h3 Cap Size
-    #cap_size
-      %select#size
-        %option S - 6 3/4
-        %option M - 7 1/4
-        %option L - 7 1/8
-        %option XL - 7 5/8
 
-    %button.k-button#get Customize
+
+      %div
+        Cap Color
+        %input#color{ value: "1"}
+
+        %button.k-button#get Customize
+      #cap.black-cap
+      #options
+
+%section
+  #information
+    %a#kendo_ui_link{href: "http://www.kendoui.com/download/download-kendo.aspx?pId=900&lict=3"} Kendo UI Download
+  #drop_down_example.k-content
+    %a#kendo_ui_drop_down_list_example{href: "http://demos.kendoui.com/web/dropdownlist/index.html" } Kendo UI DropDownList Example
+
+
+%link{rel: 'stylesheet', href: '/javascripts/kendo_ui/shared/styles/examples-offline.css'}
+%link{rel: 'stylesheet', href: '/javascripts/kendo_ui/kendo.common.min.css'}
+%link{rel: 'stylesheet', href: '/javascripts/kendo_ui/kendo.default.min.css'}
+%link{rel: 'stylesheet', href: '/javascripts/kendo_ui/drop_down_list.css'}
+
+%script{type: "text/javascript",src: "http://cdn.kendostatic.com/2013.2.716/js/kendo.all.min.js"}
+%script{type: "text/javascript",src: "/javascripts/kendo_ui/drop_down_list.js"}
