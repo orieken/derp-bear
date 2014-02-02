@@ -6,5 +6,5 @@
       -#
       -#- params.each do |pr|
       -#  %div= pr
-      %input#first_name{:type => 'text', :name=>'vehicle.year', :value => params["vehicle.year"], :readonly => true }
-      %input#first_name{:type => 'text', :name=>'vehicle.make', :value => params["vehicle.make"], :readonly => true }
+      %input#first_name{type: 'text', name:'vehicle.year', value: params["vehicle.year"], readonly: true, disabled: true }
+      %input#first_name{type: 'text', name: 'vehicle.make', value: params["vehicle.make"], readonly: true, disabled: true }
