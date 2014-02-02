@@ -28,3 +28,9 @@ ol li{
     list-style-type: none;
 
 }
+
+form{
+    width: 40%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
