@@ -1,37 +1,37 @@
-%form#basic_example_form{:action => "/forms/basic_elements_example", :method => "post"}
+%form#basic_example_form{action: "/forms/basic_elements_example", method: "post", role: 'form'}
   %legend Please Fill in the Form below
-  %ul
-    %li#your_information
+  %ul.form-group
+    %li#your_information.form-group
       %fieldset
         %legend Your Information
         %ol
-          %li
-            %label{:for => 'first_name'} First Name
-            %input#first_name{:type => 'text', :name => 'first_name', :placeholder => "First Name", :required => true }
-          %li
-            %label{:for => 'last_name'} Last Name
-            %input#last_name{:type => 'text', :name => 'last_name', :placeholder => "Last Name", :required => true}
-          %li
-            %label{:for => 'email'} Email
-            %input#email{:type => 'email', :name => 'email', :placeholder => "name@example.com", :required => true}
-          %li
-            %label{:for => 'website_url'} Website
-            %input#website_url{:type => 'url', :name => 'website_url'}
-          %li
-            %label{:for => 'pet_select'} Select a Pet
-            %select#pet_select{:name => 'pet_select'}
-              %option{:value => "2"} Cat
-              %option{:value => "35453453"} Dog
-              %option{:value => "345345"} Rabbit
-              %option{:value => "23"} Snake
-              %option{:value => "3"} Horse
-    %li#date_information
+          %li.form-group
+            %label{for: 'first_name'} First Name
+            %input#first_name.form-control{type: 'text', name: 'first_name', placeholder: "First Name", required: true }
+          %li.form-group
+            %label{for: 'last_name'} Last Name
+            %input#last_name.form-control{type: 'text', name: 'last_name', placeholder: "Last Name", required: true}
+          %li.form-group
+            %label{for: 'email'} Email
+            %input#email.form-control{type: 'email', name: 'email', placeholder: "name@example.com", required: true}
+          %li.form-group
+            %label{for: 'website_url'} Website
+            %input#website_url.form-control{type: 'url', name: 'website_url'}
+          %li.form-group
+            %label{for: 'pet_select'} Select a Pet
+            %select#pet_select.btn-hg.btn-primary{name: 'pet_select'}
+              %option{value: "2"} Cat
+              %option{value: "35453453"} Dog
+              %option{value: "345345"} Rabbit
+              %option{value: "23"} Snake
+              %option{value: "3"} Horse
+    %li#date_information.form-group
       %fieldset
         %legend Date
         %ol
-          %li
-            %label{:for => 'date_of_birth'} Date of Birth
-            %input#date_of_birth{:type => 'date', :maxlength => '255', :name => 'date_of_birth'}
+          %li.form-group
+            %label{for: 'date_of_birth'} Date of Birth
+            %input#date_of_birth.form-control{type: 'date', maxlength: '255', name: 'date_of_birth'}
           -#not supported
           -#%li
           -#  %label{:for => 'date_of_birth'} Date Time
@@ -45,65 +45,66 @@
           -#%li
           -#  %label{:for => 'week_item'} Week
           -#  %input#week_item{:type => 'week', :name => 'week_item'}
-    %li#sex_information
+    %li#sex_information.control-group
       %fieldset
         %legend What is your Sex?
         %ol
-          %li
-            %label.selectors{:for => 'male'} Male
-            %input#male{:type => 'radio', :name => 'sex', :value => 'male'}
-          %li
-            %label.selectors{:for => 'female'} Female
-            %input#female{:type => 'radio', :name => 'sex', :value => 'female'}
-    %li#transportation_example
+          %li.form-group
+            .controls
+              .control-label
+                %label.radio.radio-inline{for: 'male', data: { toggle: 'buttons-radio'}}
+                  %input{type: 'radio', name: 'male', id: 'male',data: {toggle: 'radio'}}
+                    Male
+                %label.radio.radio-inline{for: 'female'}
+                  %input{type: 'radio', name: 'female', id: 'female',data: {toggle: 'radio'}}
+                    Female
+
+            -#%input#male.radio.radio-inline{type: 'radio', name: 'sex', value: 'male', data: {toggle:"radio"}}
+          -#%li.form-group
+          -#  %label.selectors{for: 'female'} Female
+            -#%input#female.radio{type: 'radio', name: 'sex', value: 'female', data: {toggle:"radio"}}
+
+    %li#transportation_example.control-group
       %fieldset
         %legend How do you get to work?
         %ol
-          %li
-            %input#bike{:type => 'checkbox', :name => 'transportation', :value => 'bike'}
-            %label.selectors{:for => 'bike'} Bike
-          %li
-            %input#car{:type => 'checkbox', :name => 'transportation', :value => 'car'}
-            %label.selectors{:for => 'car'} Car
-          %li
-            %input#walk{:type => 'checkbox', :name => 'transportation', :value => 'walk'}
-            %label.selectors{:for => 'walk'} Walk
-    %li#password_example
+          %li.form-group
+            .controls
+              .control-label
+                %label.checkbox.checkbox-inline.selectors{for: 'bike'}
+                  %input#bike.switch.switch-square{type: 'checkbox', name: 'transportation', value: 'bike', data: { on:"primary", off: "info", toggle: 'checkbox'}}
+                    Bike
+                %label.checkbox.checkbox-inline.selectors{for: 'car'}
+                  %input#car.switch.switch-square{type: 'checkbox', name: 'transportation', value: 'car', data: {  toggle: 'checkbox'}}
+                    Car
+                %label.checkbox.checkbox-inline.selectors{for: 'walk'}
+                  %input#walk.switch.switch-square{type: 'checkbox', name: 'transportation', value: 'walk', data: {  toggle: 'checkbox'}}
+                    Walk
+
+    %li#password_example.control-group
       %fieldset
         %legend Password Example
         %ol
-          %li
-            %label{:for => 'password_field'} Example password
-            %input#password_field{:type => 'password', :name => 'password_field', :placeholder => "Enter Password"}
-    %li#tos_example
+          %li.form-group
+            %label{for: 'password_field'} Example password
+            %input#password_field.form-control{type: 'password', name: 'password_field', placeholder: "Enter Password"}
+
+    %li#tos_example.control-group
       %fieldset
         %legend Terms of Agreement
         %ol
-          %li
-            %label{:for => 'free_text_area'} Free Text Field
-            %textarea#free_text_area{:name => 'free_text_area', :rows => 4, :cols => 40}
-          %li
-            %label{:for => 'read_only_text_area'} Read only Text Field
-            %textarea#read_only_text_area{:name => 'Read_only_text_area', :rows => 4, :cols => 40, :readonly => true} This text is read only!
-    %li#hidden_field_example
+          %li.form-group
+            %label{for: 'free_text_area'} Free Text Field
+            %textarea#free_text_area.form-control{name: 'free_text_area', rows: 4, cols: 40}
+          %li.form-group
+            %label{for: 'read_only_text_area'} Read only Text Field
+            %textarea#read_only_text_area.form-control{name: 'Read_only_text_area', rows: 4, cols: 40, readonly: true} This text is read only!
+
+    %li#hidden_field_example.control-group
       %fieldset
-        %label{:for => "hi_im_hidden"} Hidden Field
-        %hidden#hi_im_hidden{:name => 'hi_im_hidden', :value => 'This element is hidden!'}
-    %li#submit_example
+        %label{for: "hi_im_hidden"} Hidden Field
+        %hidden#hi_im_hidden.form-control{name: 'hi_im_hidden', value: 'This element is hidden!'}
+
+    %li#submit_example.control-group
       %fieldset
-        %input.submit_button{:type => "submit", :value => "Submit" }
-
-        -#file
-        -#image
-
-        -#number
-
-
-        -#range
-        -#reset
-        -#search
-
-        -#tel
-
-        -#time
-        -#url
+        %input#submit_button.btn.btn-default{type: "submit", value: "Submit" }

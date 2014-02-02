@@ -3,6 +3,7 @@ require 'sinatra/flash'
 
 enable :sessions
 set :session_secret, '*&(^B234'
+set :protection, :except => [:json_csrf]
 set :haml, {:format => :html5}
 
 get '/' do
