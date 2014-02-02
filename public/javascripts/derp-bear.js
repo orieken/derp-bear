@@ -2,7 +2,7 @@
  * Created by bisbot on 1/31/14.
  */
 $("select").selectpicker({
-    style: 'btn-hg btn-primary',
+    style: 'btn-md btn-primary',
     menuStyle: 'dropdown-inverse'
 });
 
