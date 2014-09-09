@@ -22,8 +22,9 @@ gem 'accept_values_for'
 group :test do
   gem 'cucumber'
   gem 'factory_girl'
- 	gem 'rspec'
- 	gem 'watir-webdriver'
+  gem 'rspec'
+  gem 'watir-webdriver'
+  gem 'capybara'
 end
 
 

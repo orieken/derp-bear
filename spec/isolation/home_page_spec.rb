@@ -1,15 +1,15 @@
 require 'rubygems'
 require 'spec_helper'
 
-describe "Home Page Validations" do
+describe 'Home Page Validations' do
 
     before(:each) do
-      visit "/"
+      visit '/'
     end
 
-    it { page.should have_selector('ul#examples') }
-    it { page.should have_selector('li') }
-    it { page.should have_selector('li#basic_form_example a') }
-    it { page.should have_content('Basic Form Example') }
+    it { expect(page).to have_selector('ul#examples_2014') }
+    it { expect(page).to have_selector('li') }
+    it { expect(page).to have_selector('a#basic_form_example') }
+    it { expect(page).to have_content('Basic Form Example') }
 
 end
